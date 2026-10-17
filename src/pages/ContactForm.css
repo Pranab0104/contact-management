@@ -1,0 +1,109 @@
+.contact-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-image: url("/images/bgc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(20px, 4vw, 40px);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  color: var(--text-primary);
+}
+
+.contact-form h2 {
+  color: var(--text-primary);
+}
+
+.contact-form p {
+  color: var(--accent-primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  color: var(--text-white);
+  background: rgba(0, 0, 0, 0.2);
+  border-color: var(--border-secondary);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-normal), background-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-primary);
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.15);
+}
+
+.contact-form button {
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-primary);
+  transition: background-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.contact-form button:hover {
+  background-color: var(--accent-primary);
+  color: var(--bg-card);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    background-attachment: scroll;
+    padding: 24px 16px;
+  }
+  .contact-form {
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 16px 12px;
+  }
+  .contact-form {
+    padding: 22px 16px;
+    gap: 18px;
+    border-radius: var(--radius-md);
+  }
+  .contact-form h2 {
+    font-size: 1.8rem;
+  }
+  .contact-form label span {
+    font-size: 1.15rem;
+  }
+  .contact-form input {
+    height: 48px;
+    font-size: 0.95rem;
+  }
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+  .contact-form button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=ContactForm.css.map */
